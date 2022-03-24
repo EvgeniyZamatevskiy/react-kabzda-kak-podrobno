@@ -3,22 +3,38 @@ import React from 'react'
 function App() {
   return (
     <div>
+      <AppTitle />
       This is APP component
       <Rating />
       <Accordion />
+      <Rating />
     </div>
+  )
+}
+
+function AppTitle() {
+  return (
+    <>
+      This is APP component
+    </>
   )
 }
 
 function Rating() {
   return (
-    <div>
-      <div>star</div>
-      <div>star</div>
-      <div>star</div>
-      <div>star</div>
-      <div>star</div>
-    </div>
+    <>
+      <Star />
+      <Star />
+      <Star />
+      <Star />
+      <Star />
+    </>
+  )
+}
+
+function Star() {
+  return (
+    <div>star</div>
   )
 }
 
