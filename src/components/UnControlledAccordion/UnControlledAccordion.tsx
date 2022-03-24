@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 type AccordionPropsType = {
    titleValue: string
@@ -6,11 +6,11 @@ type AccordionPropsType = {
 
 function UnControlledAccordion(props: AccordionPropsType) {
 
-   const collapsed = false
+   const [collapsed, setCollapsed] = useState(false)
 
    return (
       <div>
-         <AccordionTitle title={props.titleValue} /> <button>TOGGLE</button>
+         <AccordionTitle title={props.titleValue} /> <button onClick={() => setCollapsed(!collapsed)}>TOGGLE</button>
          {!collapsed && <AccordionBody />}
       </div>
    )
