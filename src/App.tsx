@@ -1,37 +1,26 @@
 import React, { useState } from 'react'
-import { Accordion } from './components/Accordion/Accordion'
-import { UnControlledAccordion } from './components/UnControlledAccordion/UnControlledAccordion'
-import { Rating, RatingValueType } from './components/Rating/Rating'
-import { OnOff } from './components/OnOff/OnOff'
-import { UnControlledOnOff } from './components/UnControlledOnOff/UnControlledOnOff'
+import { Accordion } from './my/Accordion/Accordion'
+import { Rating } from './my/Rating/Rating'
+import { OnOff } from './my/OnOff/OnOff'
+import { UncontrolledAccordion } from './my/UncontrolledAccordion/UncontrolledAccordion'
+import { UncontrolledRating } from './my/UncontrolledRating/UncontrolledRating'
+import { UncontrolledOnOff } from './my/UncontrolledOnOff/UncontrolledOnOff'
 import './App.css'
 
-function App() {
+export const App = () => {
 
-  const [ratingValue, setRatingValue] = useState<RatingValueType>(0)
-  const [accordionCollapsed, setAccordionCollapsed] = useState<boolean>(false)
-  const [switchOn, setSwitchOn] = useState<boolean>(false)
+  const [ratingValue, setRatingValue] = useState(0)
+  const [accordionCollapsed, setAccordionCollapsed] = useState(false)
+  const [switchOn, setSwitchOn] = useState(false)
 
   return (
     <div className='App'>
-      <Rating value={ratingValue} onClick={setRatingValue} />
-      <UnControlledAccordion titleValue={'Menu'} />
-      {/* <Accordion titleValue={'Menu'} collapsed={accordionCollapsed} onChange={() => setAccordionCollapsed(!accordionCollapsed)} /> */}
-
-      {/* <OnOff on={switchOn} onChange={setSwitchOn} /> */}
-      <UnControlledOnOff onChange={setSwitchOn} /> {switchOn.toString()}
+      {/* <UncontrolledAccordion title='UncontrolledAccordion' />
+      <UncontrolledRating />
+      <UncontrolledOnOff /> */}
+      <Accordion title={'Accordion'} setCollapsed={setAccordionCollapsed} collapsed={accordionCollapsed} />
+      <Rating ratingValue={ratingValue} setRatingValue={setRatingValue} />
+      <OnOff on={switchOn} setOn={setSwitchOn} />
     </div>
   )
 }
-
-type PageTitlePropsType = {
-  title: string
-}
-
-function PageTitle(props: PageTitlePropsType) {
-  return (
-    <h1>{props.title}</h1>
-  )
-}
-
-export default App
