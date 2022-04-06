@@ -10,9 +10,10 @@ import { Input } from './ControlledComponents/Input/Input'
 import { Checkbox } from './ControlledComponents/Checkbox/Checkbox'
 import { Select } from './ControlledComponents/Select/Select'
 import { CustomSelect } from './components/CustomSelect/CustomSelect'
-import { Counter } from './components/ReactMemo/Counter'
-import { UsersMemo } from './components/ReactMemo/Users'
+import { ReactMemo } from './components/ReactMemo/ReactMemo'
 import './App.css'
+import { UseMemoExample } from './components/UseMemo/UseMemoExample'
+import { UseMemo } from './components/UseMemo/UseMemo'
 
 export type ItemsType = {
   title: string
@@ -25,8 +26,6 @@ export const App = () => {
   const [accordionCollapsed, setAccordionCollapsed] = useState(false)
   const [switchOn, setSwitchOn] = useState(false)
   const [customSelectValue, setCustomSelectValue] = useState('1')
-  const [counter, setCounter] = useState(0)
-  const [users, setUsers] = useState<Array<string>>(['Dimych', 'Valera', 'Artem'])
   const [items, setItems] = useState<Array<ItemsType>>([
     { title: 'Dymych', value: 1 },
     { title: 'Valera', value: 2 },
@@ -43,15 +42,11 @@ export const App = () => {
     console.log(value)
   }
 
-  const addUser = () => {
-    setUsers([...users, 'Sveta'])
-  }
-
   return (
     <div className='App'>
-      {/* <button onClick={addUser}>Add user</button>
-      <Counter count={counter} setCounter={setCounter} />
-      <UsersMemo users={users} /> */}
+      {/* <ReactMemo /> */}
+      {/* <UseMemoExample /> */}
+      {/* <UseMemo /> */}
 
       {/* <CustomSelect cities={cities} onChange={(customSelectValue) => { setCustomSelectValue(customSelectValue) }} value={customSelectValue} /> */}
 
@@ -62,7 +57,6 @@ export const App = () => {
         <Checkbox />
       </div>
       <Select /> */}
-
 
       {/* <UncontrolledAccordion title='UncontrolledAccordion' /> */}
       {/* <UncontrolledRating /> */}
