@@ -15,6 +15,7 @@ import './App.css'
 import { UseMemoExample } from './components/UseMemo/UseMemoExample'
 import { UseMemo } from './components/UseMemo/UseMemo'
 import { UseCallback } from './components/UseCallback/UseCallback'
+import { UseState } from './components/UseState/UseState'
 
 export type ItemsType = {
   title: string
@@ -48,7 +49,8 @@ export const App = () => {
       {/* <ReactMemo /> */}
       {/* <UseMemoExample /> */}
       {/* <UseMemo /> */}
-      <UseCallback />
+      {/* <UseCallback /> */}
+      <UseState />
 
       {/* <CustomSelect cities={cities} onChange={(customSelectValue) => { setCustomSelectValue(customSelectValue) }} value={customSelectValue} /> */}
 
