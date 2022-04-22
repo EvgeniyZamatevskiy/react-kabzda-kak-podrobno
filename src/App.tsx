@@ -17,7 +17,8 @@ import { UseMemo } from './components/UseMemo/UseMemo'
 import { UseCallback } from './components/UseCallback/UseCallback'
 import { UseState } from './components/UseState/UseState'
 import { UseEffect } from './components/UseEffect/UseEffect'
-import { UseEffectAsync } from './components/UseEffect/UseEffectAsync'
+import { UseEffectClock } from './components/UseEffect/UseEffectClock'
+
 
 export type ItemsType = {
   title: string
@@ -54,7 +55,7 @@ export const App = () => {
       {/* <UseCallback /> */}
       {/* <UseState /> */}
       {/* <UseEffect /> */}
-      <UseEffectAsync />
+      <UseEffectClock />
 
       {/* <CustomSelect cities={cities} onChange={(customSelectValue) => { setCustomSelectValue(customSelectValue) }} value={customSelectValue} /> */}
 
