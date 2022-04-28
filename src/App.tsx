@@ -11,14 +11,14 @@ import { Checkbox } from './ControlledComponents/Checkbox/Checkbox'
 import { Select } from './ControlledComponents/Select/Select'
 import { CustomSelect } from './components/CustomSelect/CustomSelect'
 import { ReactMemo } from './components/ReactMemo/ReactMemo'
-import './App.css'
 import { UseMemoExample } from './components/UseMemo/UseMemoExample'
 import { UseMemo } from './components/UseMemo/UseMemo'
 import { UseCallback } from './components/UseCallback/UseCallback'
 import { UseState } from './components/UseState/UseState'
 import { UseEffect } from './components/UseEffect/UseEffect'
 import { Clocks } from './components/UseEffect/Clocks/Clocks'
-
+import './App.css'
+import { ResetEffect } from './components/UseEffect/ResetEffect'
 
 export type ItemsType = {
   title: string
@@ -55,7 +55,8 @@ export const App = () => {
       {/* <UseCallback /> */}
       {/* <UseState /> */}
       {/* <UseEffect /> */}
-      <Clocks />
+      {/* <Clocks /> */}
+      <ResetEffect />
 
       {/* <CustomSelect cities={cities} onChange={(customSelectValue) => { setCustomSelectValue(customSelectValue) }} value={customSelectValue} /> */}
 
